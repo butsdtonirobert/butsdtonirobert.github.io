@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilan Personnel — Toni Robert</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img src="PXL_20250316_103242099_MP.jpg" alt="Toni Robert" class="profile-pic">
+    <div class="header-copy">
+      <div class="header-eyebrow">BUT Science des Données — 2ème Année · IUT de Niort</div>
+      <h1 class="header-name">Toni Robert</h1>
+      <p class="header-sub">Bilan personnel — réflexions &amp; perspectives</p>
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    <a href="presentation.html">Présentation</a>
+    <a href="projets.html">Projets</a>
+    <a href="cv.html">CV &amp; Contacts</a>
+    <a href="bilan.html" class="active">Bilan Personnel</a>
+    <a href="contact.html">Contactez-moi</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="year-bar">
+    <label for="ySel">Afficher le bilan :</label>
+    <select class="form-select" id="ySel" onchange="showYear(this.value)"
+      style="max-width:280px; margin-bottom:0;">
+      <option value="">— Choisir une année —</option>
+      <option value="y1">1ère année — BUT1 (2024–2025)</option>
+      <option value="y2">2ème année — BUT2 (2025–2026)</option>
+      <option value="y3">3ème année — BUT3 (2026–2027)</option>
+    </select>
+  </div>
+
+  <!-- ── BILAN BUT1 ─────────────────────────── -->
+  <div id="y1" class="bilan-box" style="display:none;">
+    <h2>Bilan Personnel — BUT1 Science des Données (2024–2025)</h2>
+
+    <div class="bilan-sec">
+      <h3><i class="fas fa-play-circle"></i> Introduction</h3>
+      <p>J'ai choisi d'intégrer le BUT Science des Données après avoir assisté à un salon de l'étudiant, où cette formation m'a été recommandée. Elle a tout de suite retenu mon attention, notamment grâce à son fort lien avec l'informatique, un domaine qui m'a toujours passionné. Les mathématiques étant également un de mes points forts, je me voyais sinon poursuivre une licence en mathématiques et informatique.</p>
+      <p>À la rentrée, comme beaucoup, j'étais à la fois stressé de ne connaître personne, et excité à l'idée de découvrir un nouvel environnement. J'avais quelques appréhensions sur mon niveau en informatique, mais j'ai fait de mon mieux pour rattraper ce retard, notamment en m'investissant davantage en programmation.</p>
+    </div>
+
+    <div class="bilan-sec">
+      <h3><i class="fas fa-graduation-cap"></i> Bilan Académique</h3>
+      <p>Dans l'ensemble, je suis satisfait de ma première année. Je n'ai pas rencontré de grandes difficultés d'un point de vue scolaire. C'est en programmation que j'ai le plus progressé : j'y ai investi beaucoup de temps et c'est une matière qui me motive réellement. Une belle surprise a été la matière de communication — je ne m'attendais pas à y apprendre autant, notamment sur les aspects non verbaux.</p>
+      <p>Côté organisation, j'ai essayé de me tenir à une routine quotidienne en travaillant environ 30 minutes chaque soir. Une grande fierté cette année a été notre <strong>3e place au concours Dataviz</strong>, un projet d'équipe qui m'a beaucoup apporté.</p>
+    </div>
+
+    <div class="bilan-sec">
+      <h3><i class="fas fa-code"></i> Compétences Acquises</h3>
+      <p>Tout au long de l'année, j'ai approfondi plusieurs langages et outils. <strong>Python</strong> et <strong>SQL</strong> se sont particulièrement démarqués. J'ai apprécié Python pour sa simplicité et sa puissance, et SQL m'a passionné par sa logique claire et son utilité en bases de données.</p>
+      <p>Le projet sur les bases de données m'a particulièrement marqué — il m'a permis de combiner plusieurs compétences simultanément en travail d'équipe. C'est aussi là que j'ai appris à mieux gérer mon temps et mon organisation.</p>
+    </div>
+
+    <div class="bilan-sec">
+      <h3><i class="fas fa-user"></i> Développement Personnel</h3>
+      <p>Cette année m'a permis de changer ma manière de travailler. J'ai compris l'importance de m'impliquer pleinement dans mes études, notamment parce que la formation me plaît vraiment. J'ai gagné en confiance en moi au fil des mois.</p>
+      <p>Sur le plan personnel, un tournant important a été ma décision de quitter mon club de tennis de table, où je jouais depuis dix ans. J'ai rejoint un nouveau club à Niort, dans le même esprit que pour mes études : relever de nouveaux défis et viser de nouveaux objectifs.</p>
+    </div>
+
+    <div class="bilan-sec">
+      <h3><i class="fas fa-road"></i> Projets Futurs</h3>
+      <p>Pour ma deuxième année, je souhaite vivement trouver une alternance. J'ai choisi l'option <em>« Visualisation et conception d'outils dynamiques »</em>, car c'est dans la programmation que je prends le plus de plaisir.</p>
+      <p>À plus long terme, je me vois évoluer dans le domaine de la finance avec comme objectif de devenir <strong>analyste financier</strong>. C'est un parcours ambitieux, mais je suis conscient qu'il demandera beaucoup de rigueur et de persévérance.</p>
+    </div>
+  </div>
+
+  <!-- ── BILAN BUT2 ─────────────────────────── -->
+  <div id="y2" class="bilan-box" style="display:none;">
+    <h2>Bilan Personnel — BUT2 Science des Données (2025–2026)</h2>
+
+    <div class="bilan-sec">
+      <p>En arrivant en BUT2, je me suis senti beaucoup plus confiant qu'à mon arrivée en BUT1. Ayant déjà vécu une première année dans la formation, je connaissais mieux son fonctionnement et ses attentes, et surtout j'avais acquis de meilleures bases en informatique, ce qui représentait une vraie différence par rapport à l'année précédente. Je ne ressentais plus ce sentiment d'incertitude qui m'avait accompagné lors de ma rentrée en première année : je savais à quoi m'attendre, tant au niveau du rythme de travail que de l'organisation générale de la formation. J'ai choisi l'option <em>« Visualisation et conception d'outils dynamiques »</em>, qui s'est révélée très enrichissante dans l'ensemble, même si j'aurais aimé y pratiquer davantage de programmation en Python. Le premier semestre a été plus exigeant que ce que j'avais connu jusque-là, nécessitant un travail personnel plus important et une plus grande autonomie dans l'organisation de mes révisions. J'ai toutefois apprécié la présence d'un plus grand nombre d'intervenants, qui a apporté une diversité de points de vue bienvenue et m'a permis de découvrir différentes façons d'aborder une même matière selon la personne qui l'enseignait.</p>
+
+      <p>Cette année, la matière qui m'a le plus intéressé est l'<strong>automatisation et les tests</strong> en programmation. J'ai trouvé particulièrement satisfaisant de voir comment des tâches répétitives pouvaient être prises en charge automatiquement, et à quel point écrire des tests permettait de gagner en confiance dans la qualité d'un code. Je n'ai pas rencontré de matière qui m'ait posé de grandes difficultés, ce qui m'a permis d'aborder l'année avec une certaine sérénité. Contrairement à l'année dernière, où la communication avait été une belle découverte, je n'ai pas eu de réelle surprise cette année, à l'exception de la découverte de <strong>Talend</strong> au premier semestre, un outil que je ne connaissais pas du tout et qui s'est révélé intéressant, notamment pour visualiser concrètement les flux de données d'un bout à l'autre d'un traitement. Je n'ai pas participé à de concours particulier cette année, contrairement à l'an dernier avec le concours Dataviz, mais cela m'a permis de me concentrer davantage sur les projets propres à la formation. J'ai en revanche continué à maintenir une routine de travail régulière, à raison d'environ trente minutes par jour, ce qui m'a permis de rester organisé tout au long de l'année et d'éviter de me retrouver submergé avant les périodes d'évaluation.</p>
+
+      <p>Au-delà de <strong>Python</strong> et <strong>SQL</strong>, déjà travaillés en première année, j'ai pu approfondir mes connaissances sur plusieurs nouveaux outils cette année, notamment <strong>Talend</strong>, ainsi que <strong>Docker</strong> et la ligne de commande. Le projet qui m'a le plus marqué est la création d'un <strong>pipeline de données</strong>, particulièrement intéressant car il combinait de nombreux langages et logiciels différents, ce qui m'a permis de voir comment plusieurs outils peuvent s'articuler ensemble au sein d'un même processus, depuis la collecte des données brutes jusqu'à leur restitution sous une forme exploitable. Ce projet m'a aussi fait comprendre l'importance de bien documenter chaque étape, afin qu'une autre personne puisse reprendre le travail sans difficulté. Concernant le travail en équipe, la gestion de projet et l'organisation, je n'ai pas l'impression d'avoir énormément progressé par rapport à l'année dernière, ces compétences étant déjà bien ancrées suite à ma première année ; elles sont néanmoins devenues plus naturelles, presque automatiques dans la façon dont j'aborde un nouveau projet.</p>
+
+      <p>Cette année m'a permis de continuer à gagner en confiance, dans la continuité de ce que j'avais commencé à ressentir en première année. Je me sens aujourd'hui plus à l'aise pour prendre la parole en groupe, proposer des idées ou défendre un point de vue, ce qui n'était pas évident pour moi au début de la formation. Sur le plan personnel, ma décision de rejoindre le club de tennis de table de Niort, prise l'année dernière, a porté ses fruits : je m'y plais beaucoup, j'ai pu progresser sportivement et nouer de nouvelles relations en dehors du cadre scolaire, ce qui m'a fait beaucoup de bien pour garder un bon équilibre entre vie étudiante et vie personnelle. J'ai décidé d'aller plus loin en intégrant la <strong>commission animation</strong> du club pour l'année prochaine, afin de m'investir davantage dans la vie associative et de contribuer à l'organisation d'événements. Contrairement à l'année dernière, je n'ai pas traversé de moments de doute ou de remise en question particuliers, ce qui témoigne d'une certaine stabilité retrouvée dans mon parcours et d'une meilleure connaissance de mes objectifs.</p>
+
+      <p>Concernant l'alternance, mes recherches ont abouti : j'ai trouvé une alternance chez <strong>Sorégies</strong>. Ce sera l'occasion de mettre en pratique mes compétences en conditions professionnelles et de continuer à me former sur le terrain, dans un environnement différent de celui de l'IUT, avec de nouvelles contraintes et de nouveaux interlocuteurs. Pour la suite, mes plans ont évolué par rapport à ce que j'envisageais initialement. Je ne poursuivrai pas en BUT3, car j'ai décidé de me diriger vers une école d'ingénieur, l'<strong>ESIGELEC à Poitiers</strong>, afin de continuer mon parcours dans ce nouveau cadre. Ce choix reflète l'évolution de mes ambitions au cours de ces deux dernières années : je souhaite désormais approfondir mes compétences techniques dans un cursus d'ingénieur, tout en gardant en tête les pistes professionnelles, notamment dans le domaine de la finance, qui continuent de m'attirer.</p>
+    </div>
+  </div>
+
+  <!-- ── BILAN BUT3 ─────────────────────────── -->
+  <div id="y3" class="bilan-box" style="display:none;">
+    <h2>Bilan Personnel — BUT3 Science des Données (2026–2027)</h2>
+    <div class="coming-soon">
+      <i class="fas fa-clock"></i>
+      <h3>Prochainement</h3>
+      <p>Le bilan de la 3ème année sera disponible en fin d'année scolaire.</p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  function showYear(v) {
+    ['y1','y2','y3'].forEach(id => {
+      document.getElementById(id).style.display = id === v ? 'block' : 'none';
+    });
+    if (v) {
+      setTimeout(() => {
+        document.getElementById(v).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  }
+</script>
+</body>
+</html>
