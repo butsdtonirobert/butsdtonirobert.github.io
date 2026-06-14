@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV & Contacts — Toni Robert</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img src="PXL_20250316_103242099_MP.jpg" alt="Toni Robert" class="profile-pic">
+    <div class="header-copy">
+      <div class="header-eyebrow">BUT Science des Données — 2ème Année · IUT de Niort</div>
+      <h1 class="header-name">Toni Robert</h1>
+      <p class="header-sub">CV &amp; Contacts professionnels</p>
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    <a href="presentation.html">Présentation</a>
+    <a href="projets.html">Projets</a>
+    <a href="cv.html" class="active">CV &amp; Contacts</a>
+    <a href="bilan.html">Bilan Personnel</a>
+    <a href="contact.html">Contactez-moi</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="g2" style="align-items: start;">
+
+    <!-- ── CV ───────────────── -->
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <div class="sh" style="margin-bottom:1.1rem;">
+        <h2>Mon Curriculum Vitae</h2>
+      </div>
+
+      <select class="form-select" id="cvSel" onchange="switchCV()">
+        <option value="">— Sélectionner un CV —</option>
+        <option value="CV_Toni_Robert.pdf">CV Niort</option>
+      </select>
+
+      <div class="cv-frame-box">
+        <iframe class="cv-frame" id="cvFrame" src="about:blank"></iframe>
+        <div class="cv-empty" id="cvEmpty">
+          <i class="fas fa-file-pdf"></i>
+          <p>Sélectionner un CV ci-dessus</p>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+        <a href="#" id="dlBtn" class="btn" style="pointer-events:none; opacity:.35;">
+          <i class="fas fa-download"></i> Télécharger
+        </a>
+        <a href="#" id="dlBtn2" target="_blank" class="btn-outline" style="pointer-events:none; opacity:.35;">
+          <i class="fas fa-external-link-alt"></i> Ouvrir
+        </a>
+      </div>
+    </div>
+
+    <!-- ── CONTACTS ─────────── -->
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <div class="sh" style="margin-bottom:1.1rem;">
+        <h2>Mes Coordonnées</h2>
+      </div>
+
+      <ul class="contact-list">
+        <li class="contact-row">
+          <span class="c-ico"><i class="fas fa-phone"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">Téléphone</div>
+            <div class="c-val">07 64 25 39 22</div>
+          </div>
+          <button class="ico-btn" onclick="copy('07 64 25 39 22')" title="Copier">
+            <i class="fas fa-copy"></i>
+          </button>
+        </li>
+
+        <li class="contact-row">
+          <span class="c-ico"><i class="fas fa-envelope"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">E-mail</div>
+            <div class="c-val">tonirobert85@gmail.com</div>
+          </div>
+          <button class="ico-btn" onclick="copy('tonirobert85@gmail.com')" title="Copier">
+            <i class="fas fa-copy"></i>
+          </button>
+        </li>
+
+        <li class="contact-row">
+          <span class="c-ico"><i class="fas fa-map-marker-alt"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">Localisation</div>
+            <div class="c-val">Niort, Deux-Sèvres (79)</div>
+          </div>
+        </li>
+
+        <li class="contact-row">
+          <span class="c-ico"><i class="fab fa-linkedin"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">LinkedIn</div>
+            <div class="c-val">
+              <a href="https://www.linkedin.com/in/toni-robert-b904a5341" target="_blank">
+                toni-robert-b904a5341
+              </a>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/toni-robert-b904a5341" target="_blank" class="ico-btn" title="Ouvrir">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </li>
+
+        <li class="contact-row">
+          <span class="c-ico"><i class="fas fa-map-marker-alt"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">Origine</div>
+            <div class="c-val">La Roche-sur-Yon, Vendée (85)</div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- LinkedIn visual card -->
+      <div class="card" style="flex-direction:row; align-items:center; gap:1.1rem; padding:1.25rem 1.5rem;">
+        <img src="linkedIn_PNG6.png" alt="LinkedIn" style="width:36px; height:36px; object-fit:contain; flex-shrink:0;">
+        <div style="flex:1;">
+          <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:.2rem;">Profil LinkedIn</div>
+          <div style="font-size:.875rem; font-weight:600; color:var(--dark);">Toni Robert</div>
+          <div style="font-size:.8rem; color:var(--muted);">Étudiant BUT Science des Données</div>
+        </div>
+        <a href="https://www.linkedin.com/in/toni-robert-b904a5341" target="_blank" class="btn" style="margin-top:0; flex-shrink:0;">
+          Voir le profil
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="toast" id="toast"><i class="fas fa-check"></i> <span id="tmsg">Copié !</span></div>
+
+<script>
+  function switchCV() {
+    const val = document.getElementById('cvSel').value;
+    const frame = document.getElementById('cvFrame');
+    const empty = document.getElementById('cvEmpty');
+    const dl    = document.getElementById('dlBtn');
+    const dl2   = document.getElementById('dlBtn2');
+    if (val) {
+      frame.src = val;
+      empty.style.display = 'none';
+      [dl, dl2].forEach(b => { b.href = val; b.style.pointerEvents='auto'; b.style.opacity='1'; });
+    }
+  }
+
+  function copy(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      document.getElementById('tmsg').textContent = 'Copié dans le presse-papier !';
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    });
+  }
+</script>
+</body>
+</html>

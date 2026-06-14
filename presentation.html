@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation — Toni Robert</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img src="PXL_20250316_103242099_MP.jpg" alt="Toni Robert" class="profile-pic">
+    <div class="header-copy">
+      <div class="header-eyebrow">BUT Science des Données — 2ème Année · IUT de Niort</div>
+      <h1 class="header-name">Toni Robert</h1>
+      <p class="header-sub">Mon parcours, mes passions, mes objectifs</p>
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    <a href="presentation.html" class="active">Présentation</a>
+    <a href="projets.html">Projets</a>
+    <a href="cv.html">CV &amp; Contacts</a>
+    <a href="bilan.html">Bilan Personnel</a>
+    <a href="contact.html">Contactez-moi</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="hero-intro">
+    <h2>Bonjour, je m'appelle Toni Robert</h2>
+    <p class="hero-loc"><i class="fas fa-map-marker-alt"></i> Originaire de La Roche-sur-Yon, Vendée · Étudiant à Niort</p>
+    <p>J'ai 19 ans et je suis en 2ème année de BUT Science des Données à l'IUT de Niort. Passionné de mathématiques depuis toujours, j'ai trouvé dans la data science le terrain idéal pour allier rigueur analytique et résolution de problèmes concrets. Mon ambition à terme : devenir analyste financier.</p>
+  </div>
+
+  <div class="g-auto" style="margin-bottom:1.75rem;">
+
+    <div class="card">
+      <div class="card-ico"><i class="fas fa-graduation-cap"></i></div>
+      <h3>Parcours Académique</h3>
+      <p>Baccalauréat général — spécialités Mathématiques et Physique-Chimie, option Maths Expertes. Aujourd'hui en 2ème année de BUT Science des Données à l'IUT de Niort, après une première année validée avec succès et une <strong>3e place au concours Dataviz</strong>.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-ico"><i class="fas fa-brain"></i></div>
+      <h3>Qualités Personnelles</h3>
+      <p>Rigoureux, organisé et investi, j'aime travailler en équipe et relever des défis techniques. Discret mais persévérant, j'ai développé une vraie capacité d'analyse et de synthèse tout au long de mes projets universitaires.</p>
+    </div>
+
+  </div>
+
+  <!-- Carousel tennis -->
+  <div class="card span-full" style="margin-bottom:1.75rem;">
+    <div class="card-ico"><i class="fas fa-table-tennis"></i></div>
+    <h3>Tennis de Table — Niveau National</h3>
+    <p style="max-width:680px;">Pratiquant depuis l'âge de 6 ans, j'évolue en compétition nationale depuis plus de 4 ans. Mon passage à Niort me permet de concilier études et sport de haut niveau dans les meilleures conditions.</p>
+
+    <div class="carousel-outer">
+      <div class="c-track" id="cTrack">
+        <div class="c-slide">
+          <img src="niort.png" alt="Club de Niort">
+        </div>
+        <div class="c-slide contain">
+          <img src="tonitt.png" alt="En compétition">
+        </div>
+      </div>
+      <button class="c-btn prev" onclick="move(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button class="c-btn next" onclick="move(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="c-dots" id="cDots"></div>
+  </div>
+
+  <div class="card span-full">
+    <div class="card-ico"><i class="fas fa-bullseye"></i></div>
+    <h3>Objectifs Professionnels</h3>
+    <p>Mon ambition est de devenir <strong>analyste financier</strong>. Je construis méthodiquement les compétences nécessaires : analyse de données, modélisation statistique, finance et gestion de projets. Cette 2ème année marque une étape décisive avec des projets plus complexes et plus proches des réalités professionnelles.</p>
+  </div>
+
+</main>
+
+<script>
+  let cur = 0;
+  const slides = document.querySelectorAll('.c-slide');
+  const track  = document.getElementById('cTrack');
+  const dots   = document.getElementById('cDots');
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'c-dot' + (i === 0 ? ' on' : '');
+    d.onclick = () => go(i);
+    dots.appendChild(d);
+  });
+
+  function go(n) {
+    cur = (n + slides.length) % slides.length;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    document.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('on', i === cur));
+  }
+
+  function move(d) { go(cur + d); }
+  setInterval(() => move(1), 4500);
+</script>
+</body>
+</html>

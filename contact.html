@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Toni Robert</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img src="PXL_20250316_103242099_MP.jpg" alt="Toni Robert" class="profile-pic">
+    <div class="header-copy">
+      <div class="header-eyebrow">BUT Science des Données — 2ème Année · IUT de Niort</div>
+      <h1 class="header-name">Toni Robert</h1>
+      <p class="header-sub">Formulaire de contact</p>
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    <a href="presentation.html">Présentation</a>
+    <a href="projets.html">Projets</a>
+    <a href="cv.html">CV &amp; Contacts</a>
+    <a href="bilan.html">Bilan Personnel</a>
+    <a href="contact.html" class="active">Contactez-moi</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="g2" style="align-items:start; gap:2.5rem;">
+
+    <!-- ── FORMULAIRE ─── -->
+    <div>
+      <div class="sh">
+        <h2>Envoyer un message</h2>
+      </div>
+
+      <div class="card" style="gap:.75rem;">
+        <div class="g2" style="gap:1rem;">
+          <div class="form-group" style="margin-bottom:0;">
+            <label>Prénom</label>
+            <input type="text" id="fname" placeholder="Votre prénom">
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label>Nom</label>
+            <input type="text" id="lname" placeholder="Votre nom">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Adresse e-mail</label>
+          <input type="email" id="email" placeholder="votre@email.fr">
+        </div>
+
+        <div class="form-group">
+          <label>Téléphone <span style="font-weight:400; color:var(--muted);">(optionnel)</span></label>
+          <input type="tel" id="phone" placeholder="06 XX XX XX XX">
+        </div>
+
+        <div class="form-group">
+          <label>Sujet</label>
+          <input type="text" id="subject" placeholder="Objet de votre message">
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="msg" rows="5" placeholder="Votre message..."></textarea>
+        </div>
+
+        <div>
+          <button class="btn" onclick="send()" style="width:100%; justify-content:center; padding:.7rem;">
+            <i class="fas fa-paper-plane"></i> Envoyer le message
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── INFOS DIRECTES ─── -->
+    <div>
+      <div class="sh">
+        <h2>Coordonnées directes</h2>
+      </div>
+
+      <ul class="contact-list" style="margin-bottom:1.5rem;">
+        <li class="contact-row">
+          <span class="c-ico"><i class="fas fa-phone"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">Téléphone</div>
+            <div class="c-val">07 64 25 39 22</div>
+          </div>
+          <a href="tel:+33764253922" class="ico-btn" title="Appeler">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+        </li>
+
+        <li class="contact-row">
+          <span class="c-ico"><i class="fas fa-envelope"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">E-mail</div>
+            <div class="c-val">tonirobert85@gmail.com</div>
+          </div>
+          <a href="mailto:tonirobert85@gmail.com" class="ico-btn" title="Écrire">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </li>
+
+        <li class="contact-row">
+          <span class="c-ico"><i class="fab fa-linkedin"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">LinkedIn</div>
+            <div class="c-val">
+              <a href="https://www.linkedin.com/in/toni-robert-b904a5341" target="_blank">
+                Voir mon profil
+              </a>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/toni-robert-b904a5341" target="_blank" class="ico-btn">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </li>
+
+        <li class="contact-row">
+          <span class="c-ico"><i class="fas fa-map-marker-alt"></i></span>
+          <div class="c-info">
+            <div class="c-lbl">Disponibilité</div>
+            <div class="c-val">Niort &amp; La Roche-sur-Yon</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="card" style="background:var(--green-pale); border-color:var(--green-border); gap:.35rem; padding:1.4rem 1.6rem;">
+        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--green);">
+          Disponibilité
+        </div>
+        <div style="font-size:.95rem; font-weight:700; color:var(--dark);">
+          Ouvert aux opportunités
+        </div>
+        <p style="font-size:.84rem; color:var(--muted); margin-top:.1rem;">
+          Stage, alternance ou projet — n'hésitez pas à me contacter.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="toast" id="toast"><i class="fas fa-check"></i> <span id="tmsg">Message envoyé !</span></div>
+
+<script>
+  function send() {
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg   = document.getElementById('msg').value.trim();
+
+    if (!fname || !email || !msg) {
+      alert('Merci de remplir au moins votre prénom, e-mail et message.');
+      return;
+    }
+
+    const t = document.getElementById('toast');
+    document.getElementById('tmsg').textContent = 'Message envoyé ! Je vous répondrai rapidement.';
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3000);
+
+    ['fname','lname','email','phone','subject','msg'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+  }
+</script>
+</body>
+</html>
